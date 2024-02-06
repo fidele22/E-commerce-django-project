@@ -1,8 +1,4 @@
 from django.shortcuts import render, redirect
-from .forms import PhotoCardForm
-
-# Create your views here.
-
 from .models import PhotoCard
 
 def index(request):
@@ -10,3 +6,6 @@ def index(request):
 
     return render(request, 'pages/index.html', {'cards': cards})
 
+def account(request):
+
+    return render(request, 'pages/account.html')

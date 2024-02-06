@@ -19,11 +19,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from django.urls import path
-from RealEstate.views import index
+from RealEstate.views import index,account
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",index)
+    path("",index),
+    path('account/', account, name='account'),
+
 ]
 
 

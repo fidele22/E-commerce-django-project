@@ -308,3 +308,72 @@ li:hover ul.dropdown{
         font-size: 26px;
     }
 }
+/********************* account profile dropdown submenu*********************/
+.sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 300px;
+    background: rgb(252, 251, 251);
+    max-height:0px;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: max-height 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+.sub-menu-wrap.open-menu{
+    max-height: 400px;
+}
+.sub-menu{
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+}
+.user-info h2{
+    font-weight: 900;
+    display: flex;
+}
+.user-info img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right:15px;
+}
+.sub-menu hr{
+    border: 0;
+    height: 2px;
+    color: black;
+    display: block;
+}
+.sub-menu-links{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 15px 0;
+}
+.sub-menu-links p{
+    width: 100%;
+}
+.sub-menu-links i{
+    width: 30px;
+    padding: 8px;
+    background: wheat;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.sub-menu-links span{
+    font-size: 22px;
+    font-weight: 500;
+    transition: transform 0.5s;
+
+}
+.sub-menu-links:hover span{
+transform: translateX(5px);
+}
+.sub-menu-links p:hover{
+    font-weight: 600;
+}

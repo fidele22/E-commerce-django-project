@@ -1,0 +1,116 @@
+ {% load static %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>Furniture shop</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        
+        <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+        <link rel="stylesheet" href="{% static '/css/home.css' %}">
+        
+    </head>
+    <body>
+        
+          <nav>
+            <div class="welcome">
+                <marquee behavior="" direction=""><p> welcome to our furniture shop store!</p></marquee>
+            </div>
+        
+            <div class="logo">
+                <div class="name">
+                    <h1>Furniture</h1>
+                    <label for="power">E-shop</label>
+                </div>
+               
+                <div class="search-box">
+                    
+                    <button class="btn-search"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" class="input-search" placeholder="Type to Search...">
+                              
+               </div>
+    
+               <div class="account">
+             <a href=""><i class="fa-solid fa-user"></i></a>
+             <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+              
+    
+               </div>
+            </div>
+        
+            <div class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#aboutpage"> Categories</a>
+                    <ul class="dropdown">
+                        <li><a href="">household appliances</a>
+                        
+                            <ul class="dropdown2">
+                                 <li><a href="">Living room furniture</a></li>
+                                 <li><a href="">bedroom furniture</a></li>
+                                 <li><a href="">home office furniture</a></li>
+                                 <li><a href="">kicthen&dining furniture</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Construction materials</a>
+                            <ul class="dropdown3">
+                                <li><a href="">radio</a></li>
+                                <li><a href="">radio</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="">Electronics</a>
+                            <ul class="dropdown3">
+                                <li><a href="">Phones</a></li>
+                                <li><a href="">Radio</a></li>
+                                <li><a href="">Headphones</a></li>
+                                <li><a href="">Television</a></li>
+                           </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href="#educationpage">Shop</a></li>
+                    <li><a href="#projectpage">Our store</a></li>
+                    <li><a href="#contactpage">About Us</a></li>
+                    <li><a href="#contactpage">Contact Us</a></li>
+                    <li><a href="#contactpage">Blog</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+           
+        </nav>
+       <!------Home section ------------------>
+       <section>
+     <h1>welcome</h1>
+       </section>
+    <!-------------footer page------->
+    <footer class="footer">
+        <div class="home-sci">
+            <p>Follow me on:</p>
+            <a href="#"><i class="fa-brands fa-facebook fa-beat-fade"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram fa-beat-fade"></i></a>
+            <a href="#"><i class="fa-brands fa-github fa-beat-fade" ></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp fa-beat-fade" ></i></a> 
+            <a href="#"><i class="fa-brands fa-linkedin fa-beat-fade" ></i></a>
+        </div><br>
+        <hr />
+        <div class="Copyright">
+        <div class="footer-text">
+            <p>Copyright &copy;2023 by castro | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </div>
+    </footer>
+    <script src="script.js"></script>
+    
+    </body>
+    </html> 

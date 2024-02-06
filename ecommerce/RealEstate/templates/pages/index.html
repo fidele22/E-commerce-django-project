@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
-    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static '/css/nav.css' %}">
     <link rel="stylesheet" href="{% static '/css/home.css' %}">
+    
 </head>
 <body>
     
@@ -34,14 +35,39 @@
            </div>
 
            <div class="account">
-         
-          <i class="fa-solid fa-user"></i>
-         
-          <i class="fa-solid fa-cart-shopping"></i>
-
-           </div>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+           <p onclick="toggleMenu()"><i class="fa-solid fa-user"></i></p>  
         </div>
-    
+    </div>
+    <div class="sub-menu-wrap" id="subMenu">
+     <div class="sub-menu">
+         <div class="user-info">
+             <img src="/media/photos/profile.jpg" alt="">
+             <h2>Hirwa Fidele</h2>
+         </div>
+         <hr>
+         <a href="" class="sub-menu-links">
+            <i class="fa-solid fa-user"></i>
+            <p>Account</p>
+            <span>></span>
+         </a>
+         <a href="" class="sub-menu-links">
+            <i class="fa-solid fa-user"></i>
+            <p>Account</p>
+            <span>></span>
+         </a>
+         <a href="" class="sub-menu-links">
+            <i class="fa-solid fa-user"></i>
+            <p>Account</p>
+            <span>></span>
+         </a>
+         <a href="" class="sub-menu-links">
+            <i class="fa-solid fa-user"></i>
+            <p>Account</p>
+            <span>></span>
+         </a>
+     </div>
+    </div>
         <div class="navbar">
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
@@ -50,8 +76,10 @@
                     <li><a href="">household appliances</a>
                     
                         <ul class="dropdown2">
-                             <li><a href="">tables</a></li>
-                             <li><a href="">tables</a></li>
+                             <li><a href="">Living room furniture</a></li>
+                             <li><a href="">bedroom furniture</a></li>
+                             <li><a href="">home office furniture</a></li>
+                             <li><a href="">kicthen&dining furniture</a></li>
                         </ul>
                     </li>
                     <li><a href="">Construction materials</a>
@@ -90,20 +118,29 @@
    <div class="percentage">
 
     <div class="bonus">
-    <div class="shipping">
+    <div class="icon">
+   <i class='fas fa-shipping-fast'></i>
+   </div>
+   <div class="data">
    <h1>Free shipping & Return</h1>
    <p>Free shipping on all orders over $49</p>
   </div>
 </div>
 
 <div class="bonus">
-    <div class="return">
+    <div class="icon">
+        <i class="fa-brands fa-creative-commons-sa"></i>
+    </div>
+    <div class="data">
         <h1>Money back guarantee</h1>
         <p>100% Money back guarantee</p>
-         </div>
-         </div>
+    </div>
+     </div>
          <div class="bonus">
-         <div class="support">
+         <div class="icon">
+            <i class="fa-brands fa-scribd"></i>
+            </div>
+            <div class="data">
             <h1>Online Support 24/7</h1>
             <p>Awesome support for 24/7 days</p>
              </div>
@@ -153,10 +190,14 @@
   
     <div class="featured_product">
         <div class="photo">
-          <img src="{{ card.photo.url }}" alt=" " width="220" height="200">
+          <img src="{{ card.photo.url }}" alt=" " width="250" height="230">
      </div>
       <div class="description">
-        <p>{{ card.description }}</p>
+        <p>{{ card.name }}</p>
+        <p>{{ card.type }}</p>
+        <p>{{ card.price }}</p>
+        <p>{{ card.delivery_time }}</p>
+        <p>{{ card.delivery_cost }}</p>
      </div>
     </div>
 
@@ -164,271 +205,9 @@
 
     </section>
 <!------------------------------Education section------------------------->
-
-<section class="education" id="educationpage"> 
-<h2 class="heading"> My<span>Journey</span></h2>
-
-<div class="education-row">
-    <div class="education-column">
-        <h3 class="title">Education</h3>
-
-    <div class="education-box">
-        <div class="education-content">
-            <div class="content">
-                <div class="year"><i class="fa-brands fa-readme" style="color: #3477ea;"></i><label>2021-2024</label></div>
-            <h3>Bachealor degree in Computer science</h3>
-             <p> I got my Bachealor degree in 2024 in computer science department at the national university of Rwanda.</p>
-            </div>
-        </div>
-
-        <div class="education-content">
-            <div class="content">
-            <div class="year"><i class="fa-brands fa-readme" style="color: #3477ea;"></i><label>2017-2019</label></div>
-             <h3>Advanced Level Certificate(A2)</h3>
-             <p>I got my Advanced Level certificate in 2019 in combination of [Mathematics-Computer science- Economics]</p>
-            </div>
-        </div>
-
-        <div class="education-content">
-            <div class="content">
-                <div class="year"><i class="fa-brands fa-readme" style="color: #3477ea;"></i><label>2014-2016</label></div>
-             <h3>Bachealor degree</h3>
-             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ut quae, neque natus et sint inventore, quia repudiandae optio, maxime reiciendis vel reprehenderit cumque vitae iusto in temporibus cum. Nihil.</p>
-            </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="education-column">
-    <h3 class="title">Achivements</h3>
-    
-      <div class="education-box">
-    <div class="education-content">
-        <div class="content">
-            <div class="year"><i class="fa-brands fa-readme" style="color: #3477ea;"></i><label>2023</label></div>
-         <h3>Andela Kickstart Certificate</h3>
-         <p>I got certificate after completing course and web development challenges in Andela Kickstart training during 2 months.</p>
-        </div>
-    </div>
-
-    <div class="education-content">
-        <div class="content">
-            <div class="year"><i class="fa-brands fa-readme" style="color: #3477ea;"></i><label>2017-2019</label></div>
-         <h3>web development company</h3>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ut quae, neque natus et sint inventore, quia repudiandae optio, maxime reiciendis vel reprehenderit cumque vitae iusto in temporibus cum. Nihil.</p>
-        </div>
-    </div>
-
-    <div class="education-content">
-        <div class="content">
-            <div class="year"><i class="fa-brands fa-readme" style="color: #3477ea;"></i><label>2017-2019</label></div>
-         <h3>web development company</h3>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ut quae, neque natus et sint inventore, quia repudiandae optio, maxime reiciendis vel reprehenderit cumque vitae iusto in temporibus cum. Nihil.</p>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
+<h1></h1>
 <!----------------Skills section--------------->
- <section class="skills" id="skillspage">
-    <h2 class="heading">My <span>Skills</span></h2>
-   
-    <div class="skills-row">
-        <div class="skills-column">
-            <h3 class="title">Coding Skills</h3>
 
-            <div class="skills-box">
-                <div class="skills-content">
-                    <div class="progress">
-                        <h3>HTML <span>95%</span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                    <div class="progress">
-                        <h3>CSS <span>90%</span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                    <div class="progress">
-                        <h3>JavaScript/React.js <span>85%</span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                    <div class="progress">
-                        <h3>Bootstrap <span>80%</span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                    <div class="progress">
-                        <h3>Python $Django <span>60%</span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="skills-column">
-            <h3 class="title">Other Skills</h3>
-            
-            <div class="skills-box">
-                <div class="skills-content">
-                    <div class="progress">
-                        <h3>UI Designer $Figma<span>80%</span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                    <div class="progress">
-                        <h3>Photoshop <span>70%</span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                    <!----
-                    <div class="progress">
-                        <h3> <span>90%</span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                    <div class="progress">
-                        <h3>Boostrap <span>90%</span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="project" id="projectpage">
-<h2 class="heading">My Projects</h2>
-<p>Here are the some projects and front-end challenges i have worked on:</p>
-
- <div class="project-list">
-    <div class="Wrapper">
-        <div class="image">
-        <img src="./image/calculator.jfif" alt="">
-        <div class="text">
-            <h2>Calculator</h2>
-            <p>Online calculator for quick calculations, along with a large collection of calculators on math, finance, fitness, and more.</p>
-            <a href="calculator.html"><button>Open</button></a>
-        </div>
-       </div>
-    </div>
-    <div class="Wrapper">
-        <div class="image">
-        <img src="./image/dictionary.jfif" alt="">
-        <div class="text">
-            <h2>Dictionary</h2>
-            <p>The most popular dictionary and thesaurus for learners of English. Meanings and definitions of words with pronunciations and translations.</p>
-            <a href="dictionary.html"><button>Open</button></a>
-        </div>
-       </div>
-    </div>
-    <div class="Wrapper">
-        <div class="image">
-        <img src="./image/rock.jpg" alt="">
-        <div class="text">
-            <h2>R.P.S</h2>
-            <p>Rock paper scissors is an intransitive hand game, usually played between two people.</p>
-            <a href=""><button>Open</button></a>
-        </div>
-       </div>
-    </div>
- </div>
- <div class="project-list">
-    <div class="Wrapper">
-        <div class="image">
-        <img src="./image/horoscope.jpg" alt="">
-        <div class="text">
-            <h2>Horoscope</h2>
-            <p>Read Capricorn daily horoscope to know your astrological predictions. It's a favorable day.</p>
-            <a href="horoscope.html"><button>Open</button></a>
-        </div>
-       </div>
-    </div>
-    <div class="Wrapper">
-        <div class="image">
-        <img src="./image/do list.webp" alt="">
-        <div class="text">
-            <h2>To do a list</h2>
-            <p>The most popular dictionary and thesaurus for learners of English. Meanings and definitions of words with pronunciations and translations.</p>
-            <a href="do-list.html"><button>Open</button></a>
-        </div>
-       </div>
-    </div>
-    <div class="Wrapper">
-        <div class="image">
-        <img src="./image/countries.png" alt="">
-        <div class="text">
-            <h2>Rest Countries Api</h2>
-            <p>Get information about countries via a RESTful API.</p>
-            <a href="countries-data.html"><button>Open</button></a>
-        </div>
-       </div>
-    </div>
- </div>
-</section>
- <!---------------Contact page-------->
-<section class="contact" id="contactpage">
-    <h2 class="heading">Contact <span>Me!</span></h2>
-    <p>I'm here to help! If you have any questions or if there's something specific you'd like assistance with, feel free to let me know. Whether it's about a technical issue, information on a product, or any other query, I'm here to provide information and support.How can I assist you today?</p>
-    <div class="row">
-        <div class="column">
-          <div class="card">
-            <i class="fa-solid fa-location-dot " style="color: #5a8ce2;"></i>
-            <h1>Address</h1>
-            <p>Kigali - RWANDA</p>
-            <label for="">Nyamirambo</label>
-            </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <i class="fa-solid fa-phone " style="color: #6d9cee;"></i>
-            <h1>Phone number</h1>
-            <p>MTN Rwanda</p>
-            <label for="">+250780698611</label>
-            .</div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <i class="fa-solid fa-envelope " style="color: #6d9cee;"></i>
-            <h1>Email</h1>
-            <p>Text me via address</p>
-            <label for="">fidelehirwa2@gmail.com</label>
-            </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <i class="fa-solid fa-globe" style="color: #6d9cee;"></i>
-            <h1>Website</h1>
-            <p>Read more on website</p>
-            <label for="">fidele.netly.app</label>
-            </div>
-        </div>
-      </div>
-      <form id="form" onsubmit="return validateForm()">
-        <div class="input-box">
-            <div class="input-field">
-                <input type="text" id="fullName" placeholder="Full name">
-                <span id="nameError" class="error"></span>
-            </div>
-            <div class="input-field">
-                <input type="text" id="emailAddress" placeholder="Email Address">
-                <span id="emailError" class="error"></span>
-            </div>
-        </div>
-        <div class="input-box">
-            <div class="input-field">
-                <input type="number" id="phoneNumber" placeholder="Phone number">
-                <span id="phoneError" class="error"></span>
-            </div>
-            <div class="input-field">
-                <input type="text" id="emailSubject" placeholder="Email Subject">
-                <span id="subjectError" class="error"></span>
-            </div>
-        </div>
-        <div class="textarea">
-            <textarea id="message" cols="30" rows="10" placeholder="Type your message"></textarea>
-            <span id="messageError" class="error"></span>
-        </div>
-        <div class="btn-box btns">
-            <button type="submit" class="btn">Send</button>
-        </div>
-    </form>
-  
- </section>
 <!-------------footer page------->
 <footer class="footer">
     <div class="home-sci">
@@ -449,7 +228,8 @@
     </div>
 </div>
 </footer>
-<script src="script.js"></script>
 
+<!------------------------------javascripts----------------------------------->
+<script type="text/javascript" src="{% static '/css/javascript.js' %}"></script>
 </body>
 </html>
